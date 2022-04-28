@@ -21,7 +21,7 @@ declare namespace XOAuth2 {
         /** Endpoint for token generation, defaults to 'https://accounts.google.com/o/oauth2/token' */
         accessUrl?: string | undefined;
         /** An existing valid accessToken */
-        accessToken?: string | undefined;
+        accessToken?: string | { token?: string | null, res?: any } | undefined;
         /** Private key for JSW */
         privateKey?: string | { key: string; passphrase: string; } | undefined;
         /** Optional Access Token expire time in ms */
